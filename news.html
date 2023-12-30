@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>News Archive - Toronto Monarchs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add external css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome needed for special icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mdx5kpe.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-01GX5XMW15"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-01GX5XMW15');
+</script>
+</head>
+<body>
+  <div class="topnav">
+    <ul id="no-bullets">
+      <li>
+        <a href="https://www.wnba.com">
+          <img src="https://ak-static.cms.nba.com/wp-content/themes/wnba-parent/img/logos/wnba-secondary-logo.svg" alt="WNBA logo" class="wnba">
+        </a>
+      </li>
+      <div class="dropdown">
+        <li>
+          <a href="index.html" class="top-bar-team-tab dropbtn">Toronto Monarchs
+            <i class="fa fa-caret-down caret"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="http://dream.wnba.com">Atlanta Dream</a>
+            <a href="http://sky.wnba.com">Chicago Sky</a>
+            <a href="http://sun.wnba.com">Connecticut Sun</a>
+            <a href="http://wings.wnba.com">Dallas Wings</a>
+            <a href="http://fever.wnba.com">Indiana Fever</a>
+            <a href="http://aces.wnba.com">Las Vegas Aces</a>
+            <a href="http://sparks.wnba.com">Los Angeles Sparks</a>
+            <a href="http://lynx.wnba.com">Minnesota Lynx</a>
+            <a href="http://liberty.wnba.com">New York Liberty</a>
+            <a href="http://mercury.wnba.com">Phoenix Mercury</a>
+            <a href="http://mystics.wnba.com">Washington Mystics</a>
+          </div>
+        </li>
+      </div>
+       <div class="search-container">
+         <li>
+           <a href="#">
+             <i class="fa fa-search search-icon"></i>
+           </a>
+         </li>
+       </div>
+     </ul>
+   </div>
+<header class="top-bar">
+<nav id="site-header">
+  <!-- this is logo area -->
+  <ul class="title-area">
+    <li class="name">
+      <a href="index.html" target="_self">
+        <span class="site-header_logo"></span>
+      </a>
+    </li>
+  </ul>
+  <!-- This is menu section -->
+  <div class="top-bar-section">
+    <ul>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="news.html" style="border-bottom: 20px solid #000;">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <!-- Right side social media icons -->
+  <div class="social-media-section">
+    <ul>
+      <li class="social-media-section-instagram">
+        <a class="fa fa-instagram button button-instagram" href="https://www.instagram.com"></a>
+      </li>
+      <li class="social-media-section-twitter">
+        <a class="fa fa-twitter button" href="https://www.twitter.com"></a>
+      </li>
+      <li class="social-media-section-facebook">
+        <a class="fa fa-facebook button button-facebook" href="https://www.facebook.com"></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+<!-- Mobile navigation bar -->
+<div class="mobile-topnav">
+  <div class="mobile-logo">
+    <a href="index.html"></a>
+  </div>
+  <div id="mobile-links">
+    <a href="tickets.html">Tickets</a>
+    <a href="team.html">Team</a>
+    <a href="news.html">News</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="photos.html">Photos</a>
+    <a href="videos.html">Videos</a>
+    <a href="community.html">Community</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </div>
+ <div class="hamburger-menu">
+  <a href="javascript:void(0);" class="icon" onclick="mobileNavFunction()">
+   <i class="fa fa-bars"></i>
+  </a>
+  </div>
+ <div class="mobile-search">
+   <a href="#">
+     <i class="fa fa-search search-icon2"></i>
+   </a>
+ </div>
+</div>
+<section class="content-wrap">
+  <header class="news-archive_header">  <!-- this is the news lettering  -->
+    <div class="news-header-title-div">
+      <h1 class="news-header-title">News</h1>
+    </div>
+    <div class="news-filter-nav"> <!-- this is the news navigation -->
+      <div class="news-filter-div"> <!-- this is the 2nd news nav section  -->
+    <!-- this is the month div
+      This div also controsl the position of the dropdown-->
+        <div id="btnContainer" class="months-filter-dropdown">
+          <button onclick="dropdownFunction()" class="dropbtn2">Filter by Month
+            <i onclick="dropdownFunction()" style="font-size:16px;" class="fa fa-chevron-down caret2" aria-hidden="true"></i>
+          </button>
+          <!-- this is the drop down menu  -->
+        <div id="monthsDropdown" class="dropdown-months-content">
+            <button class="btn2" onclick="filterSelection('all')">All Months</button>
+              <button class="btn2" onclick="filterSelection('january')">January</button>
+              <button class="btn2" onclick="filterSelection('february')">February</button>
+              <button class="btn2" onclick="filterSelection('march')">March</button>
+              <button class="btn2" onclick="filterSelection('april')">April</button>
+              <button class="btn2" onclick="filterSelection('may')">May</button>
+              <button class="btn2" onclick="filterSelection('june')">June</button>
+              <button class="btn2" onclick="filterSelection('july')">July</button>
+              <button class="btn2" onclick="filterSelection('august')">August</button>
+              <button class="btn2" onclick="filterSelection('september')">September</button>
+              <button class="btn2" onclick="filterSelection('october')">October</button>
+              <button class="btn2" onclick="filterSelection('november')">November</button>
+              <button class="btn2" onclick="filterSelection('december')" >December</button>
+        </div>
+      </div>
+      <!-- this is the year div  -->
+      <div class="years-filter-div">
+        <button onclick="filterSelection2()" class="dropbtn2">Filter by Year
+         <i style="font-size:16px;" class="fa fa-chevron-down caret2" aria-hidden="true"></i>
+       </button>
+      </div>
+    </div>
+    </div> <!-- end of row news-nav -->
+      </header>
+      <section class="content-container">
+        <article class="filterDiv october news-archive_article">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/stadium-small.jpg" alt="stadium">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">ScotiaBank Arena - Monarchs Home Stadium</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">Oct 16, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv october news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/kia_nurse.jpg" alt="kia nurse">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Kia Nurse Signs with Toronto Monarchs</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">Oct 12, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv october news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/community-resized.jpg" alt="community">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Monarchs Giving Back</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">Oct 9, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv october news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/LVLvUPEI-_USPORTS-resized.jpg" alt="game results">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Toronto Monarchs vs Las Vegas Aces - October 9, 2020</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">Oct 5, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv october news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/canada.jpg" alt="game results">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Toronto Monarchs vs Indiana Fever - September 30, 2020</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">Oct 1, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv september news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/belgium.jpg" alt="game results">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Atlanta Dreams vs Toronto Monarchs - September 28, 2020</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">September 30, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv september news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/defense.jpg" alt="game results">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Toronto Monarchs vs Seattle Storm - August 31, 2020</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">September 13, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv august news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/hustle.jpg" alt="game results">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">New York Liberty vs Toronto Monarchs - August 27, 2020</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">August 17, 2020</h3>
+          </div>
+
+        </article>
+        <article class="filterDiv august news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/nice_pass.jpg" alt="game results">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Toronto Monarchs vs Chicaco Sky - July 29, 2020</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">August 14, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv july news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/romania.jpg" alt="game results">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Toronto Monarchs vs Dallas Wings - July 25, 2020</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">July 29, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv july news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/serbia.jpg" alt="game results">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Los Angeles Sparks vs Toronto Monarchs - June 15, 2020</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">July 1, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv june news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/female-pose-cut.jpg" alt="training camp">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Monarchs Training Camp</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">June 20, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv june news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/pexels-basketball-net.jpg" alt="basketball rim">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Getting Ready for the Start of the WNBA Season</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">June 4, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv may news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/basketball-steal-cut.jpg" alt="basketball players">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Monarchs Players Playing Overseas</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">May 30, 2020</h3>
+          </div>
+        </article>
+        <article class="filterDiv january news-archive_article" style="border-top: 1px solid #acacac;">
+          <div class="article_photo-div">
+            <img class="article-image" src="photos/kobe-unsplash.jpg" alt="kobe">
+          </div>
+          <div class="article_summary">
+            <h2 class="news-archive_article-title">
+              <a href="#">Team Statement on the Passing of Kobe and Gianna Bryant</a>
+            </h2>
+            <p class="article-paragraph">
+              TORONTO – Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. […]
+            </p>
+            <h3 class="article-date">January 27, 2020</h3>
+          </div>
+        </article>
+      </section>
+  </section>
+<footer class="site-footer">
+  <nav class="footer_social-media">
+      <ul>
+        <li>
+          <a class="fa fa-facebook social-icon" href="https://www.facebook.com"></a>
+        </li>
+        <li>
+          <a class="fa fa-twitter social-icon" href="https://www.twitter.com"></a>
+        </li>
+        <li>
+          <a class="fa fa-instagram social-icon" href="https://www.instagram.com"></a>
+        </li>
+      </ul>
+  </nav>
+  <section class="sub-footer">
+    <div class="site-footer_copyright">
+      			<p>Copyright © 2020 Chou Khamkeuang. All rights reserved.</p>
+    </div>
+</footer>
+<script src="scripts/main.js"></script>
+</body>
+</html>
